@@ -15,6 +15,10 @@ Result:
     
 Author: Xifeng Guo, E-mail: `guoxifeng1990@163.com`, Github: `https://github.com/XifengGuo/CapsNet-Keras`
 """
+import os
+import argparse
+from keras.preprocessing.image import ImageDataGenerator
+from keras import callbacks
 
 import numpy as np
 from keras import layers, models, optimizers
@@ -201,11 +205,6 @@ def load_mnist():
 
 
 if __name__ == "__main__":
-    import os
-    import argparse
-    from keras.preprocessing.image import ImageDataGenerator
-    from keras import callbacks
-
     # setting the hyper parameters
     parser = argparse.ArgumentParser(description="Capsule Network on MNIST.")
     parser.add_argument('--epochs', default=50, type=int)
